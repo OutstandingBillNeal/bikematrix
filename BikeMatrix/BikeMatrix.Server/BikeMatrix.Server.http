@@ -1,0 +1,6 @@
+@BikeMatrix.Server_HostAddress = http://localhost:5194
+
+GET {{BikeMatrix.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
