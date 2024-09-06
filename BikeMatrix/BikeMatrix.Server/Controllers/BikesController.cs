@@ -33,13 +33,11 @@ namespace BikeMatrix.Server.Controllers
 
         // GET: api/<BikesController>
         [HttpGet(Name = "GetBikes")]
-        //public async Task<ActionResult<IEnumerable<Bike>>> Get()
-        public async Task<IEnumerable<Bike>> Get()
+        public async Task<ActionResult<IEnumerable<Bike>>> Get()
         {
             var request = new GetBikesRequest();
             var result = await _mediator.Send(request);
-            //return new OkObjectResult(result);
-            return result;
+            return new OkObjectResult(result);
         }
 
         // GET api/<BikesController>/5
