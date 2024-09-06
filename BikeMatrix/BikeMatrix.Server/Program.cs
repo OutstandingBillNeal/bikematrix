@@ -1,5 +1,7 @@
 using BikeData;
+using FlightsApi.Middleware;
 using FluentValidation;
+using Serilog;
 using UnitsOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,11 +35,18 @@ if (useSwagger)
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
+app.UseExceptionHandler("/error");
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.MapFallbackToFile("/index.html");
 
-app.Run();
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .CreateLogger();
+
+Log.Information("Starting");
+
+await app.RunAsync();
