@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeMatrix.Server", "BikeMatrix.Server\BikeMatrix.Server.csproj", "{9F04DFF5-AF48-4672-998F-FD9573716A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeMatrix.Server", "BikeMatrix.Server\BikeMatrix.Server.csproj", "{9F04DFF5-AF48-4672-998F-FD9573716A89}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "bikematrix.client", "bikematrix.client\bikematrix.client.esproj", "{425FC1E0-26B1-4EC9-9B2B-BF79C4AA9CE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeMatrix.Data", "BikeMatrix.Data\BikeMatrix.Data.csproj", "{9D69837A-D0A2-4C0B-AFE1-218F7BCFE40D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BikeMatrix.Data", "BikeMatrix.Data\BikeMatrix.Data.csproj", "{9D69837A-D0A2-4C0B-AFE1-218F7BCFE40D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitsOfWork", "UnitsOfWork\UnitsOfWork.csproj", "{2E2EB399-CE83-43B2-B3C2-CA0F8CF1FA93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitsOfWork", "UnitsOfWork\UnitsOfWork.csproj", "{2E2EB399-CE83-43B2-B3C2-CA0F8CF1FA93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7BDF0416-9DBC-42A7-BE8A-47F5A901551E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHelpers", "TestHelpers\TestHelpers.csproj", "{8DE5D8F5-95CF-410C-80C0-1FE62FD06471}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTests", "DataTests\DataTests.csproj", "{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,9 +41,21 @@ Global
 		{2E2EB399-CE83-43B2-B3C2-CA0F8CF1FA93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E2EB399-CE83-43B2-B3C2-CA0F8CF1FA93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E2EB399-CE83-43B2-B3C2-CA0F8CF1FA93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DE5D8F5-95CF-410C-80C0-1FE62FD06471}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE5D8F5-95CF-410C-80C0-1FE62FD06471}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE5D8F5-95CF-410C-80C0-1FE62FD06471}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE5D8F5-95CF-410C-80C0-1FE62FD06471}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8DE5D8F5-95CF-410C-80C0-1FE62FD06471} = {7BDF0416-9DBC-42A7-BE8A-47F5A901551E}
+		{ABBA4C95-74EB-49C6-8483-0A821F0A4AEE} = {7BDF0416-9DBC-42A7-BE8A-47F5A901551E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D32ADB7-0FCB-43DC-A105-2C6890D9052B}
